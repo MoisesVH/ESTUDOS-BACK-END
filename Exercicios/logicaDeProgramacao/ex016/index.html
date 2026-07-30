@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio016</title>
+    <script>
+        function testeTriangulo() {
+            let ladoA = parseInt(document.getElementById("vlr1").value)
+            let ladoB = parseInt(document.getElementById("vlr2").value);
+            let ladoC = parseInt(document.getElementById("vlr3").value);
+            let result = document.getElementById("result");
+            result.className = "result"
+            if (ladoA + ladoB > ladoC && ladoA + ladoC > ladoB && ladoB + ladoC > ladoA) {
+                result.innerHTML = `<p>Os lados informados formam sim um triângulo.</p>`;
+            } else {
+                result.innerHTML = `<p>Os lados informados não formam um triângulo.</p>`;
+            };
+        };
+    </script>
+    <style>
+        body {
+            background-color: #5f5f5f;
+            font-family: monospace;
+            color: #f5f5f5;
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            background-color: #f5f5f5;
+            color: #5f5f5f;
+            font-size: 28px;
+            padding: 10px;
+        }
+        form {
+            background-color: #f5f5f5;
+            color: #5f5f5f;
+            margin: auto;
+            padding: 20px;
+            width: 500px;
+            border-radius: 20px;
+        }
+        form h1 {
+            background-color: #5f5f5f;
+            color: #f5f5f5;
+            font-size: 20px;
+            margin-top: 0px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        input {
+            background: #f5f5f5;
+            height: 20px;
+            margin: 5px;
+            border: 1px solid #5f5f5f;
+            border-radius: 5px;
+        }
+        .btn {
+            background-color: #5f5f5f;
+            color: #f5f5f5;
+            width: 100%;
+            height: 35px;
+            margin-top: 15px;
+            margin-bottom: 0;
+            border: none;
+            border-radius: 10px;
+        }
+        .result {
+            background-color: #f5f5f5;
+            color: #5f5f5f;
+            margin: 20px auto;
+            padding: 20px;
+            width: 500px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exércicio 016</h1>
+    <form>
+        <h1>Triângulo?</h1>
+        <label for="vlr1">Informe o valor:</label>
+        <input type="number" id="vlr1">
+        <br>
+        <label for="vlr2">Informe o valor:</label>
+        <input type="number" id="vlr2">
+        <br>
+        <label for="vlr3">Informe o valor:</label>
+        <input type="number" id="vlr3">
+        <input class="btn" type="button" value="Enviar" onclick="testeTriangulo()">
+    </form>
+    <div id="result"></div>
+</body>
+</html>

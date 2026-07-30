@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio004</title>
+    <script>
+        function calculo() {
+            let eleitores = document.getElementById("eleitores").value;
+            let vtBranco = document.getElementById("branco").value;
+            let vtNulo = document.getElementById("nulo").value;
+            let vtValido = document.getElementById("valido").value;
+            let result = document.getElementById("result");
+            result.className = "result"
+            result.innerHTML = `<p>Sua cidade possui um total de ${eleitores} eleitores, dentre eles ${(vtBranco/eleitores)*100}% votaram em branco, ${(vtNulo/eleitores)*100}% tiveram seus votos anulados e ${(vtValido/eleitores)*100}% deles tiverem seus votos válidados</p>`;
+        };
+    </script>
+    <style>
+        body {
+            background-color: #5f5f5f;
+            font-family: monospace;
+            color: #f5f5f5;
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            background-color: #f5f5f5;
+            color: #5f5f5f;
+            font-size: 28px;
+            padding: 10px;
+        }
+        form {
+            background-color: #f5f5f5;
+            color: #5f5f5f;
+            margin: auto;
+            padding: 20px;
+            width: 400px;
+            border-radius: 20px;
+        }
+        form h1 {
+            background-color: #5f5f5f;
+            color: #f5f5f5;
+            font-size: 20px;
+            margin-top: 0px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        input {
+            background: #f5f5f5;
+            height: 20px;
+            margin: 5px;
+            border: 1px solid #5f5f5f;
+            border-radius: 5px;
+        }
+        #btn {
+            background-color: #5f5f5f;
+            color: #f5f5f5;
+            width: 100%;
+            height: 35px;
+            margin-top: 15px;
+            margin-bottom: 0;
+            border: none;
+            border-radius: 10px;
+        }
+        .result {
+            background-color: #f5f5f5;
+            color: #5f5f5f;
+            margin: 20px auto;
+            padding: 20px;
+            width: 400px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exércicio 004</h1>
+    <form>
+        <h1>Dados gerais das eleições</h1>
+        <label for="eleitores">Total de eleitores:</label>
+        <input type="number" id="eleitores">
+        <br>
+        <label for="branco">Votos em branco:</label>
+        <input type="number" id="branco">
+        <br>
+        <label for="nulo">Votos nulos:</label>
+        <input type="number" id="nulo">
+        <br>
+        <label for="valido">Votos válidos:</label>
+        <input type="number" id="valido">
+        <br>
+        <input id="btn" type="button" value="Enviar" onclick="calculo()">
+    </form>
+    <div id="result">    
+    </div>
+</body>
+</html>

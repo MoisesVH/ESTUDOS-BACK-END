@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex01</title>
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        #formulario {
+            width: 250px;
+            color: #3f3f3f;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+        }
+        fieldset {
+            display: grid;
+            grid-template-columns: 100px 100px;
+            align-items: center;
+            justify-content: space-evenly;
+            gap: 8px;
+            padding: 16px 0;
+            border: 1px solid #000000;
+
+        }
+        legend {
+            margin-bottom: 10px;
+            padding: 0 10px;
+        }
+        label {
+            width: 70px;
+            grid-column-start: 1;
+        }
+        input {
+            width: 80px;
+            height: 28px;
+            grid-column-start: 2;
+            background-color: #ffffff;
+            border: 1px solid #000000;
+        }
+
+        .grande {
+            width: 207px;
+            height: 32px;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        table {
+            display: flex;
+            width: 250px;
+            color: #3f3f3f;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            margin: 0 auto;
+        }
+        tr {
+            display: grid;
+            grid-template-columns: 50px 170px;
+            gap: 8px;
+            margin: 8px;
+        }
+        th, td  {
+            width: 100%;
+            border: 1px solid #3f3f3f;
+        }
+    </style>
+</head>
+<body>
+    <form id="formulario">
+        <fieldset>
+            <legend>Cálculo do IMC</legend>
+
+            <label class="intem" for="peso">Peso (Kg):</label>
+            <input class="intem" type="text" id="peso">
+            
+            <label class="intem altura" for="metros">Metros:</label>
+            <input class="intem altura" type="text" id="metros"> 
+            <label class="intem altura" for="centimetros">Cm:</label>
+            <input class="intem altura" type="text" id="centimetros">
+
+            <label class="intem" for="IMC">IMC: </label>
+            <input class="intem" type="text" id="IMC" readonly>
+
+            <input class="grande" type="text" id="resultado" readonly>
+            <input class="grande" type="button" onclick="caucularIMC()" value="calcular">
+        </fieldset>
+    </form>
+    <script src="script.js" defer></script>
+</body>
+</html>

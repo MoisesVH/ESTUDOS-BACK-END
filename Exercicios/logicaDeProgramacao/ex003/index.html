@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio003</title>
+    <script>
+        function calculo() {
+            let dd = 25 - document.getElementById("dia").value;
+            let mm = 4 - document.getElementById("mes").value;
+            let aaaa = 2026 - document.getElementById("ano").value;
+            let idade = dd + mm*30 + aaaa*365
+            let result = document.getElementById("result");
+            result.className = "result"
+            result.innerHTML = `<p>Você possui "${idade}" dias de vida!</p> <p>${aaaa} anos de idade.</p>`;
+        };
+    </script>
+    <style>
+        body {
+            background-color: #5f5f5f;
+            font-family: monospace;
+            color: #f5f5f5;
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            background-color: #f5f5f5;
+            color: #5f5f5f;
+            font-size: 28px;
+            padding: 10px;
+        }
+        form {
+            background-color: #f5f5f5;
+            color: #5f5f5f;
+            margin: auto;
+            padding: 20px;
+            width: 400px;
+            border-radius: 20px;
+        }
+        form h1 {
+            background-color: #5f5f5f;
+            color: #f5f5f5;
+            font-size: 20px;
+            margin-top: 0px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        input {
+            background: #f5f5f5;
+            height: 20px;
+            margin: 5px;
+            border: 1px solid #5f5f5f;
+            border-radius: 5px;
+        }
+        #btn {
+            background-color: #5f5f5f;
+            color: #f5f5f5;
+            width: 100%;
+            height: 35px;
+            margin-top: 15px;
+            margin-bottom: 0;
+            border: none;
+            border-radius: 10px;
+        }
+        .result {
+            background-color: #f5f5f5;
+            color: #5f5f5f;
+            margin: 20px auto;
+            padding: 20px;
+            width: 400px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exércicio 003</h1>
+    <form>
+        <h1>Informe sua data de nascimento</h1>
+        <label for="dia">Dia:</label>
+        <input type="number" id="dia">
+        <br>
+        <label for="mes">Mês:</label>
+        <input type="number" id="mes">
+        <br>
+        <label for="ano">Ano:</label>
+        <input type="number" id="ano">
+        <br>
+        <input id="btn" type="button" value="Enviar" onclick="calculo()">
+    </form>
+    <div id="result"></div>
+</body>
+</html>
