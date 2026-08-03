@@ -59,5 +59,5 @@ const funcaoSeta = () => {console.log('FUNÇÃO DE SETA');};
 
 funcaoSeta();
 
-//  Note que uma função de seta também é uma expressão de função, com a diferenção que são mais compactas. As funções de seta é a única 
+//      Note que uma função de seta também é uma expressão de função, com a diferenção que são mais compactas. As funções de seta é a única 
 //  definição de fução que herda o valor de this dentro do contexto onde foi definida.
