@@ -6,8 +6,8 @@ let curriculo = {
     endereco: 'Rua das Flores, 123',
     telefone: '1293456789',
     email: 'moises@example.com',
-    profissao: 'Desenvolvedor Back-End',
-    escolaridade: 'Ensino Superior',
+    experiencia: ['Atendimento ao Cliente', 'Desenvolvedor Back-End'],
+    formacao: ['Ensino Superior', 'CSP Analise e Desenvolvimento de Sistemas'],
     habilidades: ['JavaScript', 'Node.js', 'Banco de Dados'],
 };
 let validação = true;
@@ -39,11 +39,18 @@ if (validação) {
     console.log(`Email: ${curriculo.email}`);
     console.log(`Endereço: ${curriculo.endereco}`);
     console.log('');
-    console.log(`Habilidades:
-- ${curriculo.habilidades[0]}
-- ${curriculo.habilidades[1]}
-- ${curriculo.habilidades[2]}`);
+    console.log('Experiências:');
+    for (let exp of curriculo.experiencia) {
+        console.log(` - ${exp}`);
+    };
     console.log('');
-    console.log(`Profissão: ${curriculo.profissao}`);
-    console.log(`Escolaridade: ${curriculo.escolaridade}`);
+    console.log('Formações:');
+    for (let form of curriculo.formacao) {
+        console.log(` - ${form}`);
+    };
+    console.log('');
+    console.log('Habilidades:');
+    for (let hab of curriculo.habilidades) {
+        console.log(` - ${hab}`);
+    };
 };
