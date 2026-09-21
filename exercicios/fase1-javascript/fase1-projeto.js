@@ -11,9 +11,9 @@ function cadastrarUsuario(nome, telefone, email, endereco, experiencias, formaco
         telefone: telefone,
         email: email,
         endereco: endereco,
-        experiencias: experiencias,
-        formacoes: formacoes,
-        habilidades: habilidades
+        experiencias: [...experiencias],
+        formacoes: [...formacoes],
+        habilidades: [...habilidades]
     };
 
     console.log('Cadastro realizado com sucesso!');
@@ -47,7 +47,7 @@ function validarTelefone(telefone) {
     };
 };
 
-function adicionarExpriencia(curriculo, experiencia) {
+function adicionarExperiencia(curriculo, experiencia) {
     curriculo.experiencias.push(experiencia);
 };
 function adicionarFormacao(curriculo, formacao) {
@@ -84,7 +84,7 @@ function mostrarCurriculo(curriculo) {
 
 let curriculo01 = cadastrarUsuario('Moisés Viana Honorato', '7998781990', 'moisesbr2005@gmail.com', 'Rua Getúlio Vargas 383, Pov. Brejão dos Negros, Brejo Grande/SE, 49995-000', ['Atendimento ao Cliente'], ['Ensino superior completo'], ['JavaScript', 'Node.js']);
 
-adicionarExpriencia(curriculo01, 'Desenvolvedor Back-End');
+adicionarExperiencia(curriculo01, 'Desenvolvedor Back-End');
 adicionarFormacao(curriculo01, 'CST Análise e Desenvolvimento de Sistemas');
 adicionarHabilidade(curriculo01, 'MongoDB');
 
